@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/lg"
+    tools:context=".login">
+    <TextView
+        android:id="@+id/signup"
+        android:layout_width="97dp"
+        android:layout_height="50dp"
+        android:layout_margin="40dp"
+        android:fontFamily="@font/alegreya_sc_bold_italic"
+        android:gravity="center"
+        android:text="Login"
+        android:textColor="@color/Orange"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.348" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/logUsername"
+
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:hintTextColor="@color/text"
+        android:layout_marginTop="30dp"
+        android:hint="Username"
+        android:textColorHint="@color/text"
+        app:boxBackgroundColor="@color/edittext"
+        app:boxStrokeColor="@color/text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signup">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+
+            android:drawableRight="@drawable/ic_baseline_person_24"
+            android:fontFamily="@font/inter"
+            android:inputType="textPersonName"
+            android:textColor="@color/text"
+            android:textColorHint="@color/text"
+            android:textStyle="bold|italic" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/logPassword"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:hint="Password"
+        android:textColorHint="@color/text"
+        app:boxBackgroundColor="@color/edittext"
+        app:boxStrokeColor="@color/text"
+        app:hintTextColor="@color/text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logUsername"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="#373737">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:fontFamily="@font/inter"
+            android:inputType="textPassword"
+            android:textColor="@color/text"
+            android:textColorHint="@color/text"
+            android:textStyle="bold|italic"
+            tools:layout_editor_absoluteX="2dp"
+            tools:layout_editor_absoluteY="412dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <Button
+        android:id="@+id/forgotpass"
+        android:layout_width="200dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="6dp"
+        android:background="#00000000"
+        android:fontFamily="@font/alegreya_bold_italic"
+        android:onClick="callforgetPassword"
+        android:text="Forgot Password?"
+        android:textColor="@color/Orange"
+        android:textSize="14dp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/Signin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logPassword" />
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/Signin"
+        android:layout_width="294dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="44dp"
+        android:backgroundTint="@color/Orange"
+        android:fontFamily="@font/almendra_bold_italic"
+        android:onClick="loginUser"
+        android:text="Sign In"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logPassword" />
+
+    <Button
+        android:id="@+id/signUpbtn"
+        android:layout_width="409dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="4dp"
+        android:background="#00000000"
+        android:fontFamily="@font/alegreya_sc_bold_italic"
+        android:onClick="login"
+        android:text="Don't Have Account Sign Up"
+        android:textColor="@color/Orange"
+        android:textSize="14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.965"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Signin" />
+</androidx.constraintlayout.widget.ConstraintLayout>

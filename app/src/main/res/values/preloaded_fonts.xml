@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/alegreya_bold_italic</item>
+        <item>@font/alegreya_sc_bold_italic</item>
+        <item>@font/almendra_bold_italic</item>
+        <item>@font/almendra_italic</item>
+        <item>@font/inter</item>
+        <item>@font/muli</item>
+        <item>@font/muli_black</item>
+        <item>@font/muli_extrabold_italic</item>
+        <item>@font/muli_semibold</item>
+    </array>
+</resources>
